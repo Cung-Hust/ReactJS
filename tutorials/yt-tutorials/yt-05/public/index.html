@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>React App</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <template>
+      <div id="app">
+        <dashboard :id="'dashExample'">
+          <dash-layout v-for="layout in dlayouts" v-bind="layout" :debug="true" :key="layout.breakpoint">
+            <dash-item v-for="item in layout.items" v-bind.sync="item" :key="item.id">
+              <div class="content"></div>
+            </dash-item>
+          </dash-layout>
+        </dashboard>
+      </div>
+    </template>
+    
+    <script>
+    import { Dashboard, DashLayout, DashItem } from "vue-responsive-dash";
+    
+    export default {
+      name: "App",
+      components: {
+        Dashboard,
+        DashLayout,
+        DashItem
+      },
+      data() {
+        return {
+          dlayouts: [
+            {
+              breakpoint: "xl",
+              numberOfCols: 12,
+              items: [
+                { id: "1", x: 0, y: 0, width: 1, height: 1 },
+                { id: "2", x: 1, y: 0, width: 2, height: 1 },
+              ]
+            },
+            {
+              breakpoint: "lg",
+              breakpointWidth: 1200,
+              numberOfCols: 10,
+              items: [
+                { id: "1", x: 0, y: 0, width: 1, height: 1 },
+                { id: "2", x: 1, y: 0, width: 2, height: 1 },
+              ]
+            },
+            {
+              breakpoint: "md",
+              breakpointWidth: 996,
+              numberOfCols: 8,
+              items: [
+                { id: "1", x: 0, y: 0, width: 1, height: 1 },
+                { id: "2", x: 1, y: 0, width: 2, height: 1 },
+              ]
+            },
+            {
+              breakpoint: "sm",
+              breakpointWidth: 768,
+              numberOfCols: 4,
+              items: [
+                { id: "1", x: 0, y: 0, width: 1, height: 1 },
+                { id: "2", x: 1, y: 0, width: 2, height: 1 },
+              ]
+            },
+            {
+              breakpoint: "xs",
+              breakpointWidth: 480,
+              numberOfCols: 2,
+              items: [
+                { id: "1", x: 0, y: 0, width: 1, height: 1 },
+                { id: "2", x: 1, y: 0, width: 1, height: 1 },
+              ]
+            },
+            {
+              breakpoint: "xxs",
+              breakpointWidth: 0,
+              numberOfCols: 1,
+              items: [
+                {
+                  id: "1",
+                  x: 0,
+                  y: 0,
+                  width: 1,
+                  height: 1
+                },
+                { id: "2", x: 0, y: 1, width: 1, height: 1 }
+              ]
+            }
+          ]
+        };
+      }
+    };
+    </script>
+    
+    <style>
+    .content {
+      height: 100%;
+      width: 100%;
+      border: 2px solid #42b983;
+      border-radius: 5px;
+    }
+    </style>
+  </body>
+</html>

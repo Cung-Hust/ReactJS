@@ -1,0 +1,8 @@
+.Machine {
+	/*background: blue;*/
+    width: 60 px;
+    height: 60 px;
+    /*margin: 0 px;*/
+    border-radius: 10 px;
+    display: inline-block;
+}

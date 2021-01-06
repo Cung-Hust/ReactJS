@@ -1,0 +1,102 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.hj-wrap {
+  text-align: center;
+  color: #fff;
+  position: relative;
+  width: 100%;
+  height: 200px;
+  margin: 10px auto;
+  clear: both;
+  overflow: hidden;
+}
+
+.arrow {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 10px;
+  height: 10px;
+  cursor: ns-resize;
+  background-color: red;
+}
+
+.hj-transverse-split-div {
+  position: relative;
+  float: left;
+  height: 100%;
+  padding: 0px;
+  background: gray;
+  overflow: hidden;
+}
+
+.hj-wrap .hj-transverse-split-label {
+  position: absolute;
+  right: 0;
+  top: 0;
+  float: left;
+  width: 2px;
+  height: 100%;
+  display: block;
+  cursor: ew-resize;
+  background-color: #fff;
+  z-index: 9;
+}
+
+.hj-vertical-split-div {
+  position: relative;
+  border: 0px solid red;
+  width: 99.9%;
+  margin: 0 auto;
+  background-color: gray;
+}
+
+.hj-vertical-split-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  display: block;
+  cursor: ns-resize;
+  background-color: #fff;
+  z-index: 9;
+}
+h1 { margin: 150px auto 30px auto; text-align: center; }

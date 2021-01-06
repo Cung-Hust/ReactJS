@@ -1,0 +1,102 @@
+{
+    "Nodes":[
+        {
+            "B54":[
+                {
+                    "id":"1",
+                    "name": "B54",
+                    "styles":[
+                        {
+                            "float":"left",
+                            "color": "white",
+                            "width": "32%",
+                            "height": "5%",
+                            "marginLeft": "32.5%", "marginTop": "0.5%",
+                            "backgroundColor":"green",
+                            "borderRadius": "5px"
+                        }
+                    ]                               
+                }
+            ],
+
+            "B53":[
+                {
+                    "id":"2",
+                    "name": "B53",
+                    "styles":[
+                        {
+                            "float":"left",
+                            "color": "white",
+                            "width": "32%",
+                            "height": "5%",
+                            "marginLeft": "65%", "marginTop": "0.5%",
+                            "backgroundColor":"red",
+                            "borderRadius": "5px"
+                        }
+                    ]                               
+                }
+            ], 
+
+            "B47":[
+                {
+                    "id":"2",
+                    "name": "B47",
+                    
+                    "styles": "{backgroundColor:'red'}"                           
+                }
+            ]
+        }
+    ],
+
+    "Columes":[
+        {
+            "colume1":[
+                {
+                    "id":"301",
+                    "name": "Colume 2",
+                    "styles":[
+                        {  
+                            "marginTop":"0.5%",
+                            "float":"left",
+                            "width": "30%",
+                            "height": "80%",
+                            "marginLeft": "2%"
+                        }
+                    ]                               
+                }
+            ],
+
+            "colume2":[
+                {
+                    "id":"302",
+                    "name": "Colume 2",
+                    "styles":[
+                        {  
+                            "marginTop":"0.5%",
+                            "float":"left",
+                            "width": "30%",
+                            "height": "80%",
+                            "marginLeft": "3%"
+                        }
+                    ]                               
+                }
+            ],
+
+            "colume3":[
+                {
+                    "id":"303",
+                    "name": "Colume 3",
+                    "styles":[
+                        {  
+                            "marginTop":"0.5%",
+                            "float":"left",
+                            "width": "30%",
+                            "height": "80%",
+                            "marginLeft": "3%"
+                        }
+                    ]                               
+                }
+            ]
+        }
+    ]
+}
